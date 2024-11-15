@@ -3,16 +3,22 @@ import React from "react";
 import { styles } from "./style";
 import { useState } from "react";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import { useNavigation } from "@react-navigation/native";
 
 export default function LoginComp() {
   const [arrowPressed, setArrowPressed] = useState<boolean>(false);
+  const navigation = useNavigation();
+
+  const handleLogin = () => {
+    navigation.navigate('Home')
+  }
 
   return (
     <>
       <View style={styles.login}>
         <Text style={styles.textLogin}>E-mail ou número de telefone</Text>
         <TextInput style={styles.input} />
-        <TouchableOpacity style={styles.continue} activeOpacity={0.7}>
+        <TouchableOpacity onPress={handleLogin} style={styles.continue} activeOpacity={0.7}>
           <Text style={styles.continueText}>Continuar</Text>
         </TouchableOpacity>
         <Text style={styles.loginText}>

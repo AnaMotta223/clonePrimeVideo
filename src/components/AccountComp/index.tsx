@@ -3,9 +3,15 @@ import React from "react";
 import { styles } from "./style";
 import CheckBox from "react-native-check-box";
 import { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 
 export default function AccountComp() {
   const [isCheckedPassword, setIsCheckedPassword] = useState<boolean>(false);
+  const navigation = useNavigation();
+
+  const handleLogin = () => {
+    navigation.navigate('Home')
+  }
 
   return (
     <>
@@ -32,7 +38,7 @@ export default function AccountComp() {
           rightText="Mostrar senha"
           rightTextStyle={{ color: "#c4c4c4", fontSize: 12 }}
         />
-        <TouchableOpacity style={styles.continue} activeOpacity={0.7}>
+        <TouchableOpacity onPress={handleLogin} style={styles.continue} activeOpacity={0.7}>
           <Text style={styles.continueText}>Continuar</Text>
         </TouchableOpacity>
         <Text style={styles.loginText}>
