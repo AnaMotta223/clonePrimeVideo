@@ -1,11 +1,6 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#232F3E",
-    alignItems: "center",
-  },
   welcome: {
     marginRight: 250,
     color: "white",
@@ -63,11 +58,6 @@ export const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "bold",
   },
-  textCreateAccount: {
-    color: "#fff",
-    fontSize: 15,
-    fontWeight: "bold",
-  },
   input: {
     backgroundColor: "#fff",
     height: 50,
@@ -76,11 +66,6 @@ export const styles = StyleSheet.create({
     gap: 7,
     width: "85%",
     marginTop: 15,
-  },
-  createAccount: {
-    gap: 9,
-    width: "85%",
-    marginTop: 8,
   },
   continue: {
     backgroundColor: "#0D99FF",
@@ -102,22 +87,6 @@ export const styles = StyleSheet.create({
   termsOfUse: {
     textDecorationLine: "underline",
     color: "#40AEFF",
-  },
-  help: {
-    color: "#40AEFF",
-    fontWeight: "500",
-  },
-  forgot: {
-    color: "#40AEFF",
-    fontWeight: "500",
-    marginLeft: 20,
-  },
-  helpItems: {
-    flexDirection: "row",
-  },
-  btnArrow: {
-    flexDirection: "row",
-    marginLeft: -5,
   },
   copyright: {
     color: "#C4C4C4",
